@@ -21,12 +21,54 @@
     <ClCompile Include="IssueBook.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HomePage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Return.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\LibraryManagementSystem\LibraryManagementSystem\MembersForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MembersForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MMember.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Author.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Books.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Login.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IssueBook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HomePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Return.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MMember.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Author.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Books.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

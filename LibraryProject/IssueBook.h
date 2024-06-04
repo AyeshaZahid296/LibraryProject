@@ -67,6 +67,8 @@ namespace LibraryProject {
 
 
 	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::PictureBox^ pictureBox2;
 
 
 
@@ -87,6 +89,7 @@ namespace LibraryProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(IssueBook::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -105,7 +108,11 @@ namespace LibraryProject {
 			this->memberName = (gcnew System::Windows::Forms::TextBox());
 			this->bookName = (gcnew System::Windows::Forms::TextBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -306,6 +313,8 @@ namespace LibraryProject {
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::Transparent;
+			this->panel1->Controls->Add(this->pictureBox2);
+			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->label5);
 			this->panel1->Controls->Add(this->bookName);
 			this->panel1->Controls->Add(this->label1);
@@ -329,6 +338,29 @@ namespace LibraryProject {
 			this->panel1->Size = System::Drawing::Size(1023, 640);
 			this->panel1->TabIndex = 21;
 			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(12, 12);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(27, 28);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox2->TabIndex = 23;
+			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &IssueBook::pictureBox2_Click);
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(983, 12);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(28, 28);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 22;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &IssueBook::pictureBox1_Click);
+			// 
 			// IssueBook
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -339,9 +371,12 @@ namespace LibraryProject {
 			this->ForeColor = System::Drawing::SystemColors::Highlight;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"IssueBook";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"IssueBook";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -368,6 +403,7 @@ namespace LibraryProject {
 		   private: System::Void IssueDt_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 			   CalculateDueDate();
 		   }
+	
 	
 	private: void populateMemberIdCb()
 	{
@@ -567,5 +603,11 @@ namespace LibraryProject {
 	
 	}
 
+private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+}
 };
 }

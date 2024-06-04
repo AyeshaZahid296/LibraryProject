@@ -1,7 +1,5 @@
 #pragma once
-
-#include "IssueBook.h"
-
+#include "HomePage.h"
 namespace LibraryProject {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -9,10 +7,6 @@ namespace LibraryProject {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
-	/// <summary>
-	/// Summary for Login
-	/// </summary>
 	public ref class Login : public System::Windows::Forms::Form
 	{
 	public:
@@ -40,10 +34,7 @@ namespace LibraryProject {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::TextBox^ password;
-
-
 	private: System::Windows::Forms::TextBox^ userName;
-
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
@@ -211,21 +202,12 @@ private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArg
 			MessageBox::Show("Please ensure all fields are filled.", "Missing Information", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 			return;
 		}
-
-		// Hardcoded credentials for demonstration purposes
 		String^ correctUsername = "admin";
 		String^ correctPassword = "admin";
-
-		// Validate credentials
 		if (userName->Text == correctUsername && password->Text == correctPassword) {
 			MessageBox::Show("Login successful!", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
-
-			// Code to open the main application window can be added here
-			// For example:
-
-
-			LibraryProject::IssueBook^ issue = gcnew IssueBook();
-			issue->Show();
+			HomePage^ homePage = gcnew HomePage();
+			homePage->Show();
 			this->Hide();
 		}
 		else {
