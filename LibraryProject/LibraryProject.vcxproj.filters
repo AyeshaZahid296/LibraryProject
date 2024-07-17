@@ -27,9 +27,6 @@
     <ClCompile Include="Return.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\LibraryManagementSystem\LibraryManagementSystem\MembersForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MembersForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

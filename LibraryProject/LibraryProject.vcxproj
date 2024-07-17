@@ -120,7 +120,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\LibraryManagementSystem\LibraryManagementSystem\MembersForm.cpp" />
     <ClCompile Include="Author.cpp" />
     <ClCompile Include="Books.cpp" />
     <ClCompile Include="HomePage.cpp" />
